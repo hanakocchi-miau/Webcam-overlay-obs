@@ -1,0 +1,26 @@
+
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"><title>Overlayy Kanae</title><link rel="stylesheet" href="css/styles.css"></head><body>
+<div class="overlay-frame" role="application" aria-label="Overlay webcam Kanae">
+  <div class="bg-layer" style="background-image:url('gifs/1009903xztdewr269.gif')"></div>
+  <div class="bg-layer" style="background-image:url('gifs/1597600acerb9sclx.gif');opacity:0.28"></div>
+  <img src="gifs/1614917pdz08h6t5c.gif" class="gif" style="top:1.6vh;left:2.2vw" alt="deco1">
+  <img src="gifs/1790222k1nxusvjrv.gif" class="gif" style="bottom:2vh;right:2vw" alt="deco2">
+  <div class="webcam-box" id="webcamBox"></div>
+  <div class="header">Pretty Rave Girl</div>
+  <div class="decor-text">♥ Tu polola pokemona fav ♥</div>
+  <div class="socials" aria-hidden="false">
+    <div class="social"><img src="icons/x.svg" alt="X"> @hanakocchi___ / Slim Shady (Kanae)</div>
+    <div class="social"><img src="icons/arsmate.svg" alt="Arsmate"> Kanae-chaan</div>
+    <div class="social"><img src="icons/onlyfans.svg" alt="OnlyFans"> @k_kanaichaan</div>
+    <div class="social"><img src="icons/instagram.svg" alt="Instagram"> @hanakocchi.___</div>
+  </div>
+</div>
+<script>
+fetch('config.json').then(r=>r.json()).then(cfg=>{
+  if(cfg.frame_color) document.documentElement.style.setProperty('--frame-color', cfg.frame_color);
+  if(cfg.text) document.querySelector('.header').textContent = cfg.text;
+}).catch(()=>{});
+</script>
+</body></html>
